@@ -1,0 +1,64 @@
+@import 'animation';
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(36, 36, 36);
+    .wrap{
+        background-color:rgb(232, 232, 232);
+        position: absolute;
+        max-width:80%;
+        top:15%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 40px;
+        overflow: hidden;
+            h1{
+                color: rgb(204, 103, 103);
+                margin-bottom: 15px;
+            }
+            > p{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 18px;
+                color: rgb(57, 54, 54);
+                line-height: 1.4;
+                margin-bottom: 15px;
+            }
+        .callout-boxes{
+            display: grid;
+            grid-template-columns:1fr;
+            gap: 20px;
+            max-width: 960px;
+            margin: 40px auto;
+            .box{
+                display: flex;
+                flex-direction: column;
+                img{
+                    width: 100%;
+                }
+                p{
+                    font-size: 12px;
+                    background: rgb(8, 25, 26);
+                    padding: 3px 7px;
+                    color: rgb(174, 174, 174);
+                    a{
+                        color: rgb(204, 103, 103);
+                        text-decoration: none;
+                        display: inline-block;
+                        font-style: italic;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .callout-boxes{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    }
+}

@@ -1,0 +1,45 @@
+.box {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.showLeft {
+  animation: showLeft 1s;
+}
+
+@keyframes showLeft {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.showRight {
+  animation: showRight 1s;
+}
+
+@keyframes showRight {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .showTop {
+    animation: showTop 1s;
+  }
+
+  @keyframes showTop {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/*# sourceMappingURL=animation.css.map */
